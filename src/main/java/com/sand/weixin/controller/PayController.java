@@ -180,7 +180,7 @@ public class PayController {
 		String credential ="";
 		try {
 			/**生产环境下单**/
-			GatewayOrderPayResponse gwPayResponse = SandpayClient.execute(gwOrderPayReq, "https://cashier.sandpay.com.cn/gateway/api/order/pay");
+			GatewayOrderPayResponse gwPayResponse = SandpayClient.execute(gwOrderPayReq, "http://172.17.2.27:8080/gateway/api/order/pay");
 			SandpayResponseHead respHead = gwPayResponse.getHead();
 			
 			if(SandpayConstants.SUCCESS_RESP_CODE.equals(respHead.getRespCode())) {
