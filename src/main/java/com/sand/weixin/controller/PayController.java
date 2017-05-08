@@ -174,7 +174,7 @@ public class PayController {
 		
 		
 		body.setClientIp("127.0.0.1");
-		body.setNotifyUrl("http://127.0.0.1/WebGateway/stateChangeServlet");
+		body.setNotifyUrl("http://193.170.13.148:80/request/smzfAsynchronousNotification");
 		
 		
 		String credential ="";
