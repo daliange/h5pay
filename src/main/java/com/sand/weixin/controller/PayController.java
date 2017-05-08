@@ -206,7 +206,7 @@ public class PayController {
 	}
 	
 	
-	@RequestMapping(value="wxReturn")
+	@RequestMapping(value="wx/wxReturn")
 	@ResponseBody
 	public ModelAndView wxReturn(HttpServletRequest request,HttpServletResponse response) {
 		

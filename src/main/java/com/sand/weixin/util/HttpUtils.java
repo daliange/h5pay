@@ -11,6 +11,8 @@ package com.sand.weixin.util;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
+import java.net.InetSocketAddress;
+import java.net.Proxy;
 import java.nio.charset.Charset;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,7 +56,10 @@ public class HttpUtils {
         connectionManager.closeIdleConnections(MAX_IDLE_TIME_OUT);  
         HttpConnectionManagerParams httpParam = connectionManager.getParams();
         httpParam.setParameter("http.connection-manager.max-total", MAX_CONN);  
+        //Proxy proxy=new Proxy(Proxy.Type.HTTP, new InetSocketAddress("", 1));  
         httpClient = new HttpClient(connectionManager);
+        //设置代理？？？
+        httpClient.getHostConfiguration().setProxy("172.17.2.19",3128 );
         httpClient.getParams().setParameter("http.connection.timeout", MAX_TIME_OUT);  
         httpClient.getParams().setParameter("http.connection-manager.timeout", MAX_TIME_OUT.longValue());  
     }  
