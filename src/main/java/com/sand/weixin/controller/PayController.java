@@ -112,7 +112,7 @@ public class PayController {
 	}
 	
 	
-	@RequestMapping(value="order")
+	@RequestMapping(value="wx/order")
 	@ResponseBody
 	public String order(HttpServletRequest request,HttpServletResponse response) {
 		BigDecimal amt=new BigDecimal(request.getParameter("amt"));

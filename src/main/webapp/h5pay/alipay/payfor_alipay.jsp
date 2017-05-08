@@ -65,7 +65,6 @@ function order(){
         url: "order.do",
         data: {amt : $("#amount").val(),userId:userId,payMode:"sand_alipay"},
         success: function (credential) {
-        	alert(credential);
         	
         //  var charge = {"payMode": "ali_pub", "params": {"tradeNO":"2017050521001004490279615424"}};
         //alert(charge);
