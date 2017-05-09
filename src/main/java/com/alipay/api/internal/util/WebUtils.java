@@ -360,6 +360,7 @@ public abstract class WebUtils {
             connHttps.setHostnameVerifier(verifier);
             conn = connHttps;
         } else {
+        	
             conn = (HttpURLConnection) url.openConnection(proxy);
         }
 

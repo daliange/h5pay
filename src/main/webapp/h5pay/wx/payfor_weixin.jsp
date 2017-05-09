@@ -92,7 +92,8 @@ function order(){
         url: "order.do",
         data: {amt : $("#amount").val(),userId:userId,payMode:"sand_wx"},
         success: function (credential) {
-        	alert(credential);
+        	//alert(credential);
+        	
         	
         	
 /*          	var charge = {
