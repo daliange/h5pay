@@ -93,24 +93,6 @@ function order(){
         data: {amt : $("#amount").val(),userId:userId,payMode:"sand_wx"},
         success: function (credential) {
         	//alert(credential);
-        	
-        	
-        	
-/*          	var charge = {
- 	    	        payMode: "wx_pub",
- 	    	        params: {
- 	    		           "appId":"wx5d4aa509b7a68610",     //公众号名称，由商户传入     
- 	    		           "timeStamp":"1492092770085",         //时间戳，自1970年以来的秒数     
- 	    		           "nonceStr":"7b49a5d0226b4bb0a111a735368528be", //随机串     
- 	    		           "package":"prepay_id=wx201704132212507cb46fe7f00453814588",     
- 	    		           "signType":"MD5",         //微信签名方式：     
- 	    		           "paySign":"8F9374CF21C40EDE186AA633637BC572" //微信签名 
- 	    		           }
- 	    	    };   */
-        	
-          //var charge = {"payMode": "ali_pub", "params": {"tradeNO":"2017050321001004490276745043"}};
-        //alert(charge);
-          //var a = {"tradeNO":"2017050321001004490276745043","payMode":"ali_pub"}
         
   	      paymentjs.createPayment(credential, function(result, err) {
             console.log(result);
