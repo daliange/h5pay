@@ -83,9 +83,9 @@ public class PayController {
 		logger.info(" auth_code:"+auth_code);
 		logger.info(" state:"+state);
 		
-		String APP_ID = "2017040606572469";
-		String APP_PRIVATE_KEY = "MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCI6qODiTbiJJAoeAw6Tb4JSmhXfIYmnINfGJKgsrA3inyFVgM9rZQ3zd+/qwhjNv+em2jzsa4QGpwUcKNDZo5pOYEEa0Pptk5A2hfSpjxCWhp7B3+1RMbsAwNaciZFQD7xEFcmFzhY4YdJ8Z5lICdSQddckLme+LKy7jFKuKbb1fmHfGi5hmHajlZ4cAgKrtLfQDu7oXSNEWsPPsevLQnMRub7aatlGK+ubkLu3OAJKsZgxmNz7BaJVLpbPIkkhcieXa0l5omp/4LurVysXh9Hq8g7YwOjiMW+OPNP5Ye3nwEpgrT+q2XfC4++tOW4VZvRQwbQK3oglHcGyZ8fRzEFAgMBAAECggEAUVBY8COrzr68RuyVBoNpW4cvVNYFriTB+NZVLs8wzKuYrG+a2SSfpEzGl8Rx5MqjIYVW3XQm1jWXgKQssjjUVzXpo8A4wzKcYvOjtl036IguteaMOBGyujRH541noTU4rF5yA5NCybaXbJjs404nTDkCOF1TgFBfgNjpuWDU6DXY3KbPK4ly5ypjLst35zAyfiMkSGEkbiB3YTl7Z1jLBqX+YCVOOBfFkix8X5XL08HwJJ8+/9cqGRfMd0d/EB9jC9kYLHMDL4Fhrk8eoAA39SdS4WuS3p6JFqPJIkkfVF67yhhs0HFDyGYErIs0H2Nf+y5GmIw6LsiuYgpgfOV7OQKBgQDc/dglgdKu1vCA9QCmRYSCauKfLWa/Ix/1w+g/wttxlgfCIjXh9+/YmQpZXWSood+sIaI4WGrxnmirncrKxn0Rz5eye6xn1afFIK9vZSd9tGKQsfRlaAJZNDMBgEw42DhS0iRqgdB2hxPGi14AoGudAJHQ/Qk9K7J5HY5mrhbWcwKBgQCemzEiq8lV5wX2f0YjTufR/31+zZ/tZB99M8JrjnkfFrwho0i2l9U0uxxITnxWcBvClM64GoDvI+vZmhJzN9STN3S/+PZSsfCg5/48htlx4ZYeNaKGHnh+yjYk6m6wo+3bEwd6dN6yFdQNHRUyZgrBFy+CGjPBT4Zc697R13qEpwKBgQCCxfyohWClcjA0P8e4nR7DBnlA9N7+cMyy5NGFGcw+NSg2K4RzSgM2y6miJHAykkgIVobmjPwMK0+JbwDYagkNBymfxyvI7lgvgR4P724lJx/EvGoBsEDjhM5CLyfr45fA+vXtyRARc/Gx5jskZ8oGyJWBdJuJBVjB70mbXZ3KHQKBgFcj/vgEmCa5Oj53KOrnRFjNXX7YrMB53Q8l6/C6I3PgQtbcZmvjucEx+FUFwiyfhbD/nx/pd+Nrwf4ZN3/UMdf8hQmgWH2QxBszuyw4DqoR/i902mmDvkIzCVJ49v3X4ywVJWuzYFNJyOq3itjY1ZnHClQZ30ubTMAq245BLFBLAoGBAMhC82yepNdIRsWdYFFgZXipbdVzoeFIdkkOsa6lpSa6nUoQwy5qD709rX+w8EjpxtWoqXI74J5T3CqvcC1eGwWj27DEAosG1PI4Sda4WEgzpGviC9wAzb843tJTbD0Ym+caYssre8YAf8IH4Q+RFLRNJdsjILhN0KWTG1vpgW51";
-		String ALIPAY_PUBLIC_KEY = "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA1EYBTZV1j1YgqN3Hz07PGmJLkhXb6d8nwFW5TxXVGkTBLUDJ9L+Eu/AxX0OHZ882wRGQXt7r5gVUCuyHolRill2Z5+YIbILsS5tDAFGt8nzOyClrCIFzXYdc620YhdvJ5xDrBu785uLwalELTXFheRnOOEZSnJfzXN6Rv+4agq00FgXfUm3N0+W3XZJC5iqNTGNeGi6rbL0pf8Y8Ji2M0NqQskdVEt+lhhIBNlUtMxsD3kT2wNCtR7nAj9FarMkmURITpmsvpvnjPh4t/ytaH4DF1I5cOPLG4pMitJSSXOKYHAXBv06pas3il6Y1t2WYnEeKp7qqOJzMENoET6IDIQIDAQAB";
+		String APP_ID = "XXX";
+		String APP_PRIVATE_KEY = "XXX";
+		String ALIPAY_PUBLIC_KEY = "XXX";
 		AlipayClient alipayClient =
 				new DefaultAlipayClient("https://openapi.alipay.com/gateway.do",
 						APP_ID,APP_PRIVATE_KEY,"json","GBK",
@@ -103,7 +103,6 @@ public class PayController {
 		    e.printStackTrace();
 		}
 		request.setAttribute("userId", userId);
-		//String url = "h5pay/alipay/payfor_alipay.jsp";
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("userId", userId);
@@ -161,9 +160,6 @@ public class PayController {
 			body.setPayMode("sand_wx");
 			body.setPayExtra("{\"subAppid\":\"wx94348ceda2791351\",\"userId\":\""+userId+"\"}");
 
-//			head.setProductId("00000005");
-//			body.setPayMode("sand_wx");
-//			body.setPayExtra("{\"subAppid\":\"wx94348ceda2791351\",\"userId\":\"oI3GMv_boU4fi_qdQxHo8lW22bh8\"}");
 //			
 		}else if(payMode!=null && payMode.equals("sand_alipay")){
 			//支付宝
@@ -174,7 +170,7 @@ public class PayController {
 		
 		
 		body.setClientIp("127.0.0.1");
-		body.setNotifyUrl("http://193.170.13.148:80/request/smzfAsynchronousNotification");
+		body.setNotifyUrl("XXX");
 		
 		
 		String credential ="";
@@ -215,12 +211,8 @@ public class PayController {
 		logger.info("微信返回[code:"+code +  " state:"+state+" ]");
 		
 		Map<String, Object> param=new HashMap<String, Object>();
-		param.put("appid", "wx94348ceda2791351");
-		//wx94348ceda2791351 生产  杉德支付
-		//wx71bc1338e63671a1 测试
-		param.put("secret", "1aab250f4fee9d159a98fc730799b63f");
-		//1aab250f4fee9d159a98fc730799b63f  生产  支付
-		//716b62a1b63a6d9a447011f3e6567ad8
+		param.put("appid", "XXX");
+		param.put("secret", "XXX");
 		param.put("code", code);
 		param.put("grant_type", "authorization_code");
 		
@@ -231,7 +223,6 @@ public class PayController {
 		logger.info("openid返回 " +  openid);
 		
 		request.setAttribute("userId", openid);
-		//String url = "h5pay/alipay/payfor_alipay.jsp";
 		
 		ModelAndView mv = new ModelAndView();
 		mv.addObject("userId", openid);
