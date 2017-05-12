@@ -355,13 +355,13 @@ public abstract class WebUtils {
         //URL urltemp = new URL(url);  
         //conn = (HttpURLConnection)urltemp.openConnection(proxy);  
         if ("https".equals(url.getProtocol())) {
-            HttpsURLConnection connHttps = (HttpsURLConnection) url.openConnection(proxy);
+            HttpsURLConnection connHttps = (HttpsURLConnection) url.openConnection();
             connHttps.setSSLSocketFactory(socketFactory);
             connHttps.setHostnameVerifier(verifier);
             conn = connHttps;
         } else {
         	
-            conn = (HttpURLConnection) url.openConnection(proxy);
+            conn = (HttpURLConnection) url.openConnection();
         }
 
         conn.setRequestMethod(method);

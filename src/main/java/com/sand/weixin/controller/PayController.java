@@ -158,7 +158,7 @@ public class PayController {
 			//微信
 			head.setProductId("00000005");
 			body.setPayMode("sand_wx");
-			body.setPayExtra("{\"subAppid\":\"wx94348ceda2791351\",\"userId\":\""+userId+"\"}");
+			body.setPayExtra("{\"subAppid\":\"XXX\",\"userId\":\""+userId+"\"}");
 
 //			
 		}else if(payMode!=null && payMode.equals("sand_alipay")){
@@ -176,7 +176,7 @@ public class PayController {
 		String credential ="";
 		try {
 			/**生产环境下单**/
-			GatewayOrderPayResponse gwPayResponse = SandpayClient.execute(gwOrderPayReq, "http://172.17.2.27:8080/gateway/api/order/pay");
+			GatewayOrderPayResponse gwPayResponse = SandpayClient.execute(gwOrderPayReq, "https://cashier.sandpay.com.cn/gateway/api/order/pay");
 			SandpayResponseHead respHead = gwPayResponse.getHead();
 			
 			if(SandpayConstants.SUCCESS_RESP_CODE.equals(respHead.getRespCode())) {
