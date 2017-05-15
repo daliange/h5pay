@@ -351,7 +351,7 @@ public abstract class WebUtils {
     private static HttpURLConnection getConnection(URL url, String method,
                                                    String ctype) throws IOException {
         HttpURLConnection conn = null;
-        Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.17.2.19",3128 ));  
+        //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.17.2.19",3128 ));  
         //URL urltemp = new URL(url);  
         //conn = (HttpURLConnection)urltemp.openConnection(proxy);  
         if ("https".equals(url.getProtocol())) {
