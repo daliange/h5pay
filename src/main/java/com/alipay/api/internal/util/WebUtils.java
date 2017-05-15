@@ -352,15 +352,14 @@ public abstract class WebUtils {
                                                    String ctype) throws IOException {
         HttpURLConnection conn = null;
         //Proxy proxy = new Proxy(Proxy.Type.HTTP, new InetSocketAddress("172.17.2.19",3128 ));  
-        //URL urltemp = new URL(url);  
-        //conn = (HttpURLConnection)urltemp.openConnection(proxy);  
         if ("https".equals(url.getProtocol())) {
+        	//HttpsURLConnection connHttps = (HttpsURLConnection) url.openConnection(proxy);
             HttpsURLConnection connHttps = (HttpsURLConnection) url.openConnection();
             connHttps.setSSLSocketFactory(socketFactory);
             connHttps.setHostnameVerifier(verifier);
             conn = connHttps;
         } else {
-        	
+        	//conn = (HttpURLConnection) url.openConnection(proxy);
             conn = (HttpURLConnection) url.openConnection();
         }
 
