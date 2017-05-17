@@ -15,6 +15,6 @@ function gotox(url){
 </script>
 
 <body
-	onload="gotox('https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2017040606572469&scope=auth_base&redirect_uri=http%3a%2f%2fqrskb.sandpay.com.cn%2fh5pay%2falipayReturn.do&state=1')">
+	onload="gotox('https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=XXX&scope=auth_base&redirect_uri=http%3a%2f%2fXXXXXXXX%2fh5pay%2falipayReturn.do&state=1')">
 </body>
 </html>
